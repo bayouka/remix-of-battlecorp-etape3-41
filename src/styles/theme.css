@@ -1,0 +1,121 @@
+/* Battlecorp Design System - Theme Tokens */
+/* All colors MUST be HSL values */
+
+:root {
+  /* === COLOR TOKENS === */
+
+  /* Background layers */
+  --background: 222 47% 5%;
+  --background-elevated: 222 47% 8%;
+  --foreground: 210 40% 98%;
+
+  /* Card surfaces */
+  --card: 222 47% 9%;
+  --card-foreground: 210 40% 98%;
+
+  /* Popover/Dropdown surfaces */
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+
+  /* Primary brand color (CTA / action) */
+  --primary: 25 100% 50%;
+  --primary-foreground: 222 47% 5%;
+
+  /* Secondary (neutral HUD surface) */
+  --secondary: 222 32% 12%;
+  --secondary-foreground: 210 40% 98%;
+
+  /* Muted elements */
+  --muted: 222 32% 12%;
+  --muted-foreground: 215 20% 68%;
+
+  /* Accent highlights (HUD cyan) */
+  --accent: 186 100% 50%;
+  --accent-foreground: 222 47% 5%;
+
+  /* Destructive/Error */
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Borders & Inputs (graphite HUD) */
+  --border: 220 14% 24%;
+  --input: 220 14% 18%;
+
+  /* Focus ring (HUD cyan) */
+  --ring: 186 100% 50%;
+
+  /* === BORDER RADIUS TOKENS === */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Legacy support */
+  --radius: var(--radius-md);
+
+  /* === Z-INDEX TOKENS === */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* === OPACITY TOKENS === */
+  --opacity-disabled: 0.5;
+  --opacity-hover: 0.8;
+  --opacity-overlay: 0.8;
+
+  /* === SIDEBAR TOKENS === */
+  --sidebar-background: 222 47% 6%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 25 100% 50%;
+  --sidebar-primary-foreground: 222 47% 5%;
+  --sidebar-accent: 222 32% 12%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 220 14% 24%;
+  --sidebar-ring: 186 100% 50%;
+}
+
+/* Light mode override (not used in V0 but ready) */
+.light {
+  --background: 0 0% 100%;
+  --background-elevated: 0 0% 98%;
+  --foreground: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: 25 100% 50%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 186 100% 40%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+
+  --ring: 186 100% 40%;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5% 26%;
+  --sidebar-primary: 25 100% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 5% 96%;
+  --sidebar-accent-foreground: 240 6% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 186 100% 40%;
+}
