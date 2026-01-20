@@ -2,6 +2,7 @@ import { Header, Footer, Section, Container } from "@/components/layout";
 import { useContent } from "@/i18n/LocaleProvider";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import heroImage from "@/assets/battlecorp-hero.webp";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 export function Home() {
@@ -13,34 +14,44 @@ export function Home() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <Section id="top">
-          <Container className="text-center">
-            <div className="flex flex-col items-center justify-center py-20">
-              <h1 className="text-heading-1 text-foreground">
-                {content.hero.title}
-              </h1>
-              <p className="mt-4 text-body text-muted-foreground max-w-2xl">
-                {content.hero.subtitle}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4 justify-center">
-                <Button asChild>
-                  <a href={content.hero.ctaPrimaryHref}>
-                    {content.hero.ctaPrimaryLabel}
-                  </a>
-                </Button>
-                <Button asChild variant="outline">
-                  <a 
-                    href={content.hero.ctaSecondaryHref} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    {content.hero.ctaSecondaryLabel}
-                  </a>
-                </Button>
-              </div>
+        <section
+          id="top"
+          className="relative min-h-screen flex items-center justify-center"
+        >
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+          
+          {/* Content */}
+          <Container className="relative z-10 text-center">
+            <h1 className="text-heading-1 text-white drop-shadow-lg">
+              {content.hero.title}
+            </h1>
+            <p className="mt-4 text-body text-white/90 max-w-2xl mx-auto drop-shadow-md">
+              {content.hero.subtitle}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg">
+                <a href={content.hero.ctaPrimaryHref}>
+                  {content.hero.ctaPrimaryLabel}
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+                <a 
+                  href={content.hero.ctaSecondaryHref} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  {content.hero.ctaSecondaryLabel}
+                </a>
+              </Button>
             </div>
           </Container>
-        </Section>
+        </section>
 
         {/* Wargame Section */}
         <Section id="wargame">
